@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ica.asd.frontend.gui.mainmenu.MainMenuController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0">
+         <center>
+            <Pane prefHeight="720.0" prefWidth="780.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f7f7f7);" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="140.0" layoutY="200.0" prefHeight="400.0" prefWidth="500.0">
+                     <children>
+                       <Button fx:id="settingsButton" layoutX="100.0" layoutY="300.0"
+                         mnemonicParsing="false" onAction="#handleSettingsButton" prefHeight="60.0"
+                         prefWidth="300.0" text="%mainmenu.settings">
+                         <font>
+                           <Font size="27.0" />
+                         </font>
+                       </Button>
+                       <Button fx:id="evaluateGameButton" layoutX="100.0" layoutY="220.0"
+                         mnemonicParsing="false" onAction="#handleEvaluateGameButton"
+                         prefHeight="60.0" prefWidth="300.0" text="%mainmenu.evaluate_game">
+                         <font>
+                           <Font size="27.0" />
+                         </font>
+                       </Button>
+                       <Button fx:id="createGameButton" layoutX="100.0" layoutY="140.0"
+                         mnemonicParsing="false" onAction="#handleCreateGameButton"
+                         prefHeight="60.0" prefWidth="300.0" text="%mainmenu.create_game">
+                         <font>
+                           <Font size="27.0" />
+                         </font>
+                       </Button>
+                       <Button fx:id="joinGameButton" layoutX="100.0" layoutY="60.0"
+                         mnemonicParsing="false" onAction="#handleJoinGameButton" prefHeight="60.0"
+                         prefWidth="300.0" text="%mainmenu.join_game">
+                         <font>
+                           <Font size="27.0" />
+                         </font>
+                       </Button>
+                     </children>
+                  </Pane>
+                  <Line endY="720.0" />
+                  <Line endY="720.0" layoutX="780.0" />
+                  <Pane layoutX="180.0" layoutY="70.0" prefHeight="80.0" prefWidth="420.0" style="-fx-background-color: linear-gradient(to bottom, #7ea6e0, #007fff); -fx-border-radius: 15; -fx-border-width: 1; -fx-border-color: #000000; -fx-background-radius: 15;" />
+                  <Label alignment="CENTER" layoutX="180.0" layoutY="80.0" prefHeight="60.0" prefWidth="420.0" text="Beer Distribution Game" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <Pane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="720.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

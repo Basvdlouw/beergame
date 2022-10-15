@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+        beergame1:
+                image: beergame
+                container_name: beergame1
+                environment:
+                  - DISPLAY=$DISPLAY
+                volumes:
+                        - /tmp/.X11-unix:/tmp/.X11-unix
+        beergame2:
+                image: beergame
+                container_name: beergame2
+                environment:
+                  - DISPLAY=$DISPLAY
+                volumes:
+                        - /tmp/.X11-unix:/tmp/.X11-unix

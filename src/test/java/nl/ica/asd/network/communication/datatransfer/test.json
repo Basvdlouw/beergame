@@ -1,0 +1,36 @@
+{
+  "@class": "nl.ica.asd.network.communication.datatransferobjects.directlyserializable.AppendEntry",
+  "electionTerm": 1,
+  "player": {
+    "username": "bla",
+    "businessUUID": "7e6f8c23-b5f6-41a9-bb40-171f1e5db122",
+    "ip": "123",
+    "port": 1,
+    "playerStatus": "CONNECTED"
+  },
+  "previousLogIndex": 1,
+  "previousLogElectionTerm": 1,
+  "logEntries": [
+    {
+      "@class": "nl.ica.asd.network.communication.datatransferobjects.directlyserializable.logentries.logentrydatatypes.BusinessUpdate",
+      "logIndex": 1,
+      "electionTerm": 1,
+      "updateType": "SET",
+      "agent": {
+        "businessRules": "dsf"
+      }
+    },
+    {
+      "@class": "nl.ica.asd.network.communication.datatransferobjects.directlyserializable.logentries.logentrydatatypes.OrderUpdate",
+      "logIndex": 1,
+      "electionTerm": 1,
+      "updateType": "SET",
+      "order": {
+        "amount": 1,
+        "sender": null,
+        "receiver": null
+      }
+    }
+  ],
+  "leaderCommit": 8
+}

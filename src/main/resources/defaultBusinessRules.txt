@@ -1,0 +1,5 @@
+Order = 35 - (Stock - OpenOrders + IncomingGoods - IncomingOrders)
+
+if Order * IncomingGoodsPrice > Budget (
+    Order = (Budget / IncomingGoodsPrice) - 3
+)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<LineChart fx:id="chart" prefHeight="611.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8"
+  xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="nl.ica.asd.frontend.gui.evaluate.businessgraphs.charts.BusinessChartsController">
+  <xAxis>
+    <NumberAxis side="BOTTOM"/>
+  </xAxis>
+  <yAxis>
+    <NumberAxis side="LEFT"/>
+  </yAxis>
+</LineChart>

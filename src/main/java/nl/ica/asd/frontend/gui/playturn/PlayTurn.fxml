@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ica.asd.frontend.gui.playturn.PlayTurnController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0">
+         <bottom>
+            <Pane prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom, #7ea6e0, #007fff);" BorderPane.alignment="CENTER">
+               <children>
+                 <Label fx:id="waitingForOtherPlayersLabel" alignment="CENTER" layoutX="555.0" layoutY="25.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #000000; -fx-border-radius: 5;" text="%playturn.waiting_for_other_players" textAlignment="RIGHT" visible="false">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Label>
+                 <Label fx:id="invalidOrderAmountLabel" alignment="CENTER" layoutX="555.0" layoutY="25.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-color: #ff0000; -fx-border-radius: 5;" text="%playturn.invalid_order_amount" textAlignment="RIGHT" textFill="RED" visible="false">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Label>
+                  <Line endX="1280.0" />
+                 <Button fx:id="configureAgentButton" layoutX="171.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleConfigureAgentButton" prefHeight="50.0" prefWidth="175.0" text="%playturn.configure_agent">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Button>
+                 <Button fx:id="toggleAgentButton" layoutX="353.0" layoutY="15.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="%playturn.activate_agent">
+                   <font>
+                     <Font size="14.0" />
+                   </font>
+                 </Button>
+                 <TextField fx:id="placeOrderField" alignment="CENTER" layoutX="900.0" layoutY="15.0" onAction="#handlePlaceOrderField" prefHeight="50.0" prefWidth="150.0" promptText="%playturn.place_order.placeholder">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </TextField>
+              <Button fx:id="placeOrderButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1080.0" layoutY="15.0" mnemonicParsing="false" onAction="#handlePlaceOrderButton" prefHeight="50.0" prefWidth="150.0" text="%playturn.place_order">
+                <font>
+                  <Font size="14.0" />
+                </font>
+              </Button>
+                 <Button fx:id="leaveButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="%playturn.leave">
+                   <font>
+                     <Font size="14.0" />
+                   </font>
+                 </Button>
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <Pane prefHeight="620.0" prefWidth="530.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f7f7f7);" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endY="645.0" />
+                  <Line endY="645.0" layoutX="530.0" />
+                  <Pane layoutY="595.0" prefHeight="50.0" prefWidth="530.0">
+                     <children>
+                    <Label fx:id="playerLevel" alignment="CENTER" prefHeight="50.0" prefWidth="530.0" text="Wholesale">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                    <Line endX="530.0" startX="1.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="45.0" prefHeight="125.0" prefWidth="450.0">
+                     <children>
+                        <Pane layoutX="25.0" prefHeight="125.0" prefWidth="200.0">
+                           <children>
+                             <Label alignment="CENTER" layoutY="25.0" prefHeight="30.0" prefWidth="200.0" text="%playturn.round_indenticator">
+                               <font>
+                                 <Font size="14.0" />
+                               </font>
+                             </Label>
+                             <Label fx:id="currentRoundCounter" alignment="CENTER" layoutX="75.0" layoutY="60.0" prefHeight="30.0" prefWidth="50.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-color: #ffffff; -fx-background-radius: 5;" text="20/30">
+                               <font>
+                                 <Font size="14.0" />
+                               </font>
+                             </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="225.0" prefHeight="125.0" prefWidth="200.0">
+                           <children>
+                             <Label fx:id="timeleftLabel" alignment="CENTER" layoutY="25.0" prefHeight="30.0" prefWidth="200.0" text="%playturn.time_left">
+                               <font>
+                                 <Font size="14.0" />
+                               </font>
+                             </Label>
+                             <Label fx:id="remainingTimeCounter" alignment="CENTER" layoutX="75.0" layoutY="60.0" prefHeight="30.0" prefWidth="50.0" style="-fx-border-color: #000000; -fx-border-radius: 5; -fx-background-color: #ffffff; -fx-background-radius: 5;" text="00:00">
+                               <font>
+                                 <Font size="14.0" />
+                               </font>
+                             </Label>
+                           </children>
+                        </Pane>
+                        <Line endX="450.0" layoutY="100.0" />
+                     </children>
+                  </Pane>
+                 <Pane fx:id="playerPane" layoutX="65.0" layoutY="125.0" prefHeight="450.0" prefWidth="400.0" />
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <Pane prefHeight="620.0" prefWidth="375.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutY="595.0" prefHeight="50.0" prefWidth="375.0">
+                     <children>
+                    <Line endX="375.0" />
+                    <Label fx:id="senderLevel" alignment="CENTER" prefHeight="50.0" prefWidth="375.0" text="Warehouse">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="supplierPane" layoutX="37.5" layoutY="125.0" prefHeight="200.0" prefWidth="300.0" />
+                  <Pane layoutX="37.5" layoutY="325.0" prefHeight="250.0" prefWidth="300.0">
+                     <children>
+                        <ListView fx:id="playerListView" prefHeight="250.0" prefWidth="300.0" />
+                     </children></Pane>
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="620.0" prefWidth="375.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutY="595.0" prefHeight="50.0" prefWidth="375.0">
+                     <children>
+                    <Line endX="375.0" startX="1.0" />
+                    <Label fx:id="recipientLevel" alignment="CENTER" prefHeight="50.0" prefWidth="375.0" text="Retailer">
+                      <font>
+                        <Font size="18.0" />
+                      </font>
+                    </Label>
+                     </children>
+                  </Pane>
+                 <Pane fx:id="clientPane" layoutX="37.5" layoutY="125.0" prefHeight="450.0" prefWidth="300.0" />
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

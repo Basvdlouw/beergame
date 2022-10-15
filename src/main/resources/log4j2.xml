@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR" name="error-config">
+  <Properties>
+    <Property name="LOG_DIR">logs</Property>
+    <Property name="ARCHIVE">archive</Property>
+    <Property name="PATTERN">%-5level %d [%t] %c:%M(%L): %m%n</Property>
+  </Properties>
+  <Appenders>
+    <Console name="STDOUT" target="SYSTEM_OUT">
+      <PatternLayout pattern="${PATTERN}"/>
+    </Console>
+
+    <RollingFile name="fileWriter"
+      fileName="${LOG_DIR}/error.log"
+      filePattern="${ARCHIVE}/error.log.%d{yyyy-MM-dd-hh-mm}.gz">
+      <PatternLayout pattern="${PATTERN}"/>
+      <TimeBasedTriggeringPolicy/>
+    </RollingFile>
+  </Appenders>
+  <Loggers>
+    <Root level="INFO">
+      <AppenderRef ref="fileWriter"/>
+    </Root>
+  </Loggers>
+</Configuration>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ica.asd.frontend.gui.configgame.ConfigGameController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0">
+         <bottom>
+            <Pane prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom, #7ea6e0, #007fff);" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="1280.0" />
+                 <Button fx:id="cancel" cancelButton="true" layoutX="50.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleCancelButton" prefHeight="50.0" prefWidth="150.0" text="%configgame.cancel">
+                   <font>
+                     <Font size="14.0" />
+                   </font>
+                 </Button>
+                 <Button fx:id="createGame" layoutX="1080.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="50.0" prefWidth="150.0" text="%configgame.creategame">
+                   <font>
+                     <Font size="14.0" />
+                   </font>
+                 </Button>
+               </children>
+            </Pane>
+         </bottom>
+         <left>
+            <Pane prefHeight="620.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+           <Pane prefHeight="620.0" prefWidth="250.0"
+             style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);"
+             BorderPane.alignment="CENTER">
+           </Pane>
+         </right>
+         <center>
+            <Pane prefHeight="620.0" prefWidth="780.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f7f7f7);" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endY="645.0" />
+                  <Line endY="645.0" layoutX="780.0" />
+                  <Pane layoutX="50.0" layoutY="50.0" prefHeight="50.0" prefWidth="250.0">
+                     <children>
+                        <Line endX="250.0" layoutY="50.0" />
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="%configgame.title">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="100.0" layoutY="120.0" prefHeight="400.0" prefWidth="630.0">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="600.0">
+                           <children>
+                             <TextField fx:id="gameName" layoutX="175.0" layoutY="10.0"
+                               prefHeight="30.0" prefWidth="200.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                             <Pane layoutY="10.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #007fff; -fx-background-radius: 10;">
+                                <children>
+                                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%configgame.name" textFill="WHITE">
+                                    <font>
+                                      <Font name="System Bold" size="14.0" />
+                                    </font>
+                                  </Label>
+                                </children>
+                             </Pane>
+                             <Label fx:id="nameErrorMessage" layoutX="400.0" layoutY="10.0"
+                               prefHeight="30.0" text="%configgame.errorname" textFill="RED"
+                               visible="false"/>
+                           </children>
+                        </Pane>
+                        <Pane layoutY="50.0" prefHeight="50.0" prefWidth="600.0">
+                           <children>
+                              <Pane layoutY="10.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #007fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%configgame.gametype" textFill="WHITE">
+                                       <font>
+                                         <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                             <ComboBox fx:id="gameType" layoutX="175.0" layoutY="10.0" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutY="100.0" prefHeight="50.0" prefWidth="600.0">
+                           <children>
+                              <Pane layoutY="10.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #007fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%configgame.visibility" textFill="WHITE">
+                                       <font>
+                                         <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                             <ComboBox fx:id="visibility" layoutX="175.0" layoutY="10.0" prefHeight="30.0" prefWidth="150.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutY="150.0" prefHeight="50.0" prefWidth="600.0">
+                           <children>
+                              <Pane layoutY="10.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #007fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%configgame.players" textFill="WHITE">
+                                       <font>
+                                         <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                             <TextField fx:id="players" layoutX="175.0" layoutY="10.0"
+                               prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="300.0"
+                               AnchorPane.topAnchor="350.0">
+                               <font>
+                                 <Font size="14.0"/>
+                               </font>
+                             </TextField>
+                             <Label fx:id="playerErrorMessage" layoutX="400.0" layoutY="10.0"
+                               prefHeight="30.0" text="%configgame.errorplayers" textFill="RED"
+                               visible="false"/>
+                           </children>
+                        </Pane>
+                        <Pane layoutY="200.0" prefHeight="50.0" prefWidth="600.0">
+                           <children>
+                              <Pane layoutY="10.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #007fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%configgame.turns" textFill="WHITE">
+                                       <font>
+                                         <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                             <TextField fx:id="turns" layoutX="175.0" layoutY="10.0"
+                               prefHeight="30.0" prefWidth="100.0" AnchorPane.rightAnchor="300.0"
+                               AnchorPane.topAnchor="425.0">
+                               <font>
+                                 <Font size="14.0"/>
+                               </font>
+                             </TextField>
+                           </children>
+                          <Label fx:id="turnErrorMessage" layoutX="400.0" layoutY="10.0"
+                            prefHeight="30.0" text="%configgame.errorturn" textFill="RED"
+                            visible="false"/>
+                        </Pane>
+                        <Pane layoutY="250.0" prefHeight="50.0" prefWidth="600.0">
+                           <children>
+                              <Pane layoutY="10.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #007fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%configgame.timelimit" textFill="WHITE">
+                                       <font>
+                                         <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                             <TextField fx:id="timeLimit" layoutX="175.0" layoutY="10.0"
+                               prefHeight="30.0" prefWidth="100.0">
+                                 <font>
+                                   <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                             <CheckBox fx:id="timeLimitBox" layoutX="300.0" layoutY="10.0"
+                               mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0"/>
+                             <Label fx:id="timeLimitErrorMessage" layoutX="400.0" layoutY="10.0"
+                               prefHeight="30.0 " text="%configgame.timeLimitError" textFill="RED"
+                               visible="false"/>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

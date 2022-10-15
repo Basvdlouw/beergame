@@ -1,0 +1,12 @@
+{
+  "name": "Beergame",
+  "date": null,
+  "settings": {
+    "maxPlayers": 4,
+    "maxRounds": 10,
+    "timeLimitPerRound": null,
+    "initialBusinessStates": null,
+    "gameVisibilityType": "VISIBLE",
+    "supplyChainType": "LINEAR"
+  }
+}

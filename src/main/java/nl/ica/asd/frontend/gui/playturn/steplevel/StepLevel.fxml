@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<AnchorPane prefHeight="125.0" prefWidth="200.0" style="-fx-background-color: transparent;"
+  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="nl.ica.asd.frontend.gui.playturn.steplevel.StepLevelController">
+  <GridPane layoutX="25.0" layoutY="25.0" prefHeight="75.0" prefWidth="150.0">
+    <Pane prefHeight="45.0" prefWidth="155.0"
+      style="-fx-background-color: #FFFFFF; -fx-border-color: #C3C3C3;">
+      <Label fx:id="stepLabel" alignment="CENTER" prefHeight="${stepLabel.parent.height}"
+        prefWidth="${stepLabel.parent.width}" text="..." textAlignment="CENTER" textFill="BLUE"/>
+    </Pane>
+    <Pane prefHeight="35.0" prefWidth="155.0"
+      style="-fx-background-color: #FFFFFF; -fx-border-color: #C3C3C3;" GridPane.rowIndex="1">
+      <Label fx:id="stepValueLabel" alignment="CENTER" prefHeight="${stepValueLabel.parent.height}"
+        prefWidth="${stepValueLabel.parent.width}" text="0" textAlignment="CENTER"/>
+    </Pane>
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+  </GridPane>
+</AnchorPane>

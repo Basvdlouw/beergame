@@ -1,0 +1,23 @@
+.keyword {
+  -fx-fill: purple;
+  -fx-font-weight: bold;
+}
+
+.variable {
+  -fx-fill: blue;
+  -fx-font-weight: bold;
+}
+
+.int {
+  -fx-fill: green;
+  -fx-font-weight: bold;
+}
+
+.paren {
+  -fx-fill: firebrick;
+  -fx-font-weight: bold;
+}
+
+.paragraph-box:has-caret {
+  -fx-background-color: #f2f9fc;
+}

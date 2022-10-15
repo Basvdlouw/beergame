@@ -1,0 +1,8 @@
+{
+  "maxPlayers": 10,
+  "maxRounds": 10,
+  "timeLimitPerRound": null,
+  "initialBusinessStates": null,
+  "gameVisibilityType": "VISIBLE",
+  "supplyChainType": "LINEAR"
+}

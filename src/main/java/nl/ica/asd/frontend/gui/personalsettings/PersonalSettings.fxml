@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ica.asd.frontend.gui.personalsettings.PersonalSettingsController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0">
+         <bottom>
+            <Pane prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom, #7ea6e0, #007fff);" BorderPane.alignment="CENTER">
+               <children>
+                 <Button fx:id="saveSettingsButton" layoutX="1080.0" layoutY="15.0"
+                   mnemonicParsing="false" onAction="#handleSaveSettingsButton" prefHeight="50.0"
+                   prefWidth="150.0" text="%personalsettings.save">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                 <Button fx:id="cancelButton" cancelButton="true" layoutX="50.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleCancelSettingButton" prefHeight="50.0" prefWidth="150.0" text="%personalsettings.cancel">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Line endX="1280.0" />
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <Pane prefHeight="620.0" prefWidth="780.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f7f7f7);" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endY="645.0" />
+                  <Line endY="645.0" layoutX="780.0" />
+                  <Pane layoutX="50.0" layoutY="100.0" prefHeight="400.0" prefWidth="680.0">
+                     <children>
+                        <Pane layoutX="50.0" layoutY="20.0" prefHeight="50.0" prefWidth="580.0">
+                           <children>
+                              <Pane layoutY="10.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #007fff; -fx-background-radius: 10;">
+                                 <children>
+                                   <Label fx:id="userNameOption" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%personalsettings.username" textFill="WHITE">
+                                     <font>
+                                       <Font name="System Bold" size="14.0" />
+                                     </font>
+                                   </Label>
+                                 </children>
+                              </Pane>
+                             <TextField fx:id="userNameField" layoutX="175.0" layoutY="10.0"
+                               prefHeight="30.0" prefWidth="225.0"
+                               promptText="%personalsettings.username.placeholder">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                             <Label fx:id="userNameErrorMessage"
+                               layoutX="425.0" layoutY="10.0" prefHeight="30.0" prefWidth="300.0"
+                               text="%personalsettings.errormessage" textFill="RED" visible="false">
+                               <font>
+                                 <Font size="14.0"/>
+                               </font>
+                             </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="50.0" layoutY="75.0" prefHeight="50.0" prefWidth="580.0">
+                           <children>
+                              <Pane layoutY="10.0" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #007fff; -fx-background-radius: 10;">
+                                 <children>
+                                   <Label fx:id="languageOption" alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%personalsettings.language" textFill="WHITE">
+                                     <font>
+                                       <Font name="System Bold" size="14.0" />
+                                     </font>
+                                   </Label>
+                                 </children>
+                              </Pane>
+                             <ComboBox fx:id="languageBox" layoutX="175.0" layoutY="10.0" maxHeight="30.0" maxWidth="200.0" prefHeight="30.0" prefWidth="200.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="75.0" layoutY="50.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Line endX="200.0" layoutY="50.0" />
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="200.0" text="%personalsettings.title">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <Pane prefHeight="620.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="620.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

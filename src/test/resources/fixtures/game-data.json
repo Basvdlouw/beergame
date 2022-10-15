@@ -1,0 +1,12 @@
+{
+  "name": "FEM BeerGame",
+  "date": 1544569200000,
+  "settings": {
+    "maxPlayers": 10,
+    "maxRounds": 10,
+    "timeLimitPerRound": null,
+    "initialBusinessStates": null,
+    "gameVisibilityType": "VISIBLE",
+    "supplyChainType": "LINEAR"
+  }
+}

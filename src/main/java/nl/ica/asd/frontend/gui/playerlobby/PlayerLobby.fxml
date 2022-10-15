@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ica.asd.frontend.gui.playerlobby.PlayerLobbyController">
+   <children>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0">
+         <bottom>
+            <Pane prefHeight="75.0" prefWidth="1280.0" style="-fx-background-color: linear-gradient(to bottom, #7ea6e0, #007fff);" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="errorMessage" alignment="CENTER" layoutX="490.0" layoutY="25.0" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #ff0000;" text="%playerLobby.errorMessage" textFill="RED" visible="false">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Line endX="1280.0" />
+                  <Button fx:id="startGameButton" layoutX="1080.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleStartGameButton" prefHeight="50.0" prefWidth="150.0" text="%playerLobby.startgame">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="ipAdressField" layoutX="50.0" layoutY="25.0" prefHeight="30.0" prefWidth="175.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="copyIPButton" layoutX="250.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleCopyButton" prefHeight="30.0" prefWidth="100.0" text="%playerLobby.copy">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <Pane prefHeight="620.0" prefWidth="580.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #f7f7f7);" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endY="645.0" />
+                  <Line endY="645.0" layoutX="580.0" />
+                  <Pane layoutX="165.0" layoutY="50.0" prefHeight="50.0" prefWidth="250.0">
+                     <children>
+                        <Line endX="250.0" layoutY="50.0" />
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="%playerLobby.connected">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TableView fx:id="connectedPlayerWithBusinesses" layoutX="90.0" layoutY="150.0" prefHeight="450.0" prefWidth="400.0">
+                    <columns>
+                      <TableColumn fx:id="playerName" prefWidth="200.0" text="%playerLobby.username" />
+                      <TableColumn fx:id="playerUUID" prefWidth="200.0" text="%playerLobby.level" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </center>
+         <left>
+            <Pane prefHeight="620.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="50.0" layoutY="50.0" prefHeight="50.0" prefWidth="250.0">
+                     <children>
+                        <Line endX="250.0" layoutY="50.0" />
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="%playerLobby.choose">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="50.0" layoutY="150.0" prefHeight="400.0" prefWidth="250.0">
+                     <children>
+                       <Button fx:id="chooseFactoryLevelGameButton" layoutX="20.0" layoutY="25.0"
+                         mnemonicParsing="false" onAction="#handleChooseFactoryLevelGameButton"
+                         prefHeight="50.0" prefWidth="210.0" text="%playerLobby.factory">
+                           <font>
+                             <Font size="17.0"/>
+                           </font>
+                        </Button>
+                       <Button fx:id="chooseRegionalWarehouseLevelGameButton" layoutX="20.0"
+                         layoutY="100.0" mnemonicParsing="false"
+                         onAction="#handleChooseRegionalWarehouseLevelGameButton" prefHeight="50.0"
+                         prefWidth="210.0" text="%playerLobby.regional_warehouse">
+                           <font>
+                             <Font size="17.0"/>
+                           </font>
+                        </Button>
+                       <Button fx:id="chooseWholesaleLevelGameButton" layoutX="20.0" layoutY="175.0"
+                         mnemonicParsing="false" onAction="#handleChooseWholesaleLevelGameButton"
+                         prefHeight="50.0" prefWidth="210.0" text="%playerLobby.wholesale">
+                           <font>
+                             <Font size="17.0"/>
+                           </font>
+                        </Button>
+                       <Button fx:id="chooseRetailerLevelButton" layoutX="20.0" layoutY="250.0"
+                         mnemonicParsing="false" onAction="#handleChooseRetailerLevelButton"
+                         prefHeight="50.0" prefWidth="210.0" text="%playerLobby.retailer">
+                           <font>
+                             <Font size="17.0"/>
+                           </font>
+                        </Button>
+                        <Button fx:id="confirmLevelButton" layoutX="50.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleConfirmButton" prefHeight="40.0" prefWidth="150.0" text="%playerLobby.confirm" visible="false">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="620.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e8e8e8);" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="50.0" layoutY="50.0" prefHeight="50.0" prefWidth="250.0">
+                     <children>
+                        <Line endX="250.0" layoutY="50.0" />
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="250.0" text="%playerLobby.available">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <TableView fx:id="chosenBusinesses" layoutX="50.0" layoutY="150.0" prefHeight="400.0" prefWidth="250.0">
+                    <columns>
+                       <TableColumn fx:id="businessUUID" prefWidth="100.0"
+                         text="%playerLobby.level"/>
+                       <TableColumn fx:id="businessAmount" prefWidth="100.0"
+                         text="%playerLobby.amount"/>
+                       <TableColumn fx:id="businessAvailable" prefWidth="50.0"
+                         text="%playerLobby.ready"/>
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

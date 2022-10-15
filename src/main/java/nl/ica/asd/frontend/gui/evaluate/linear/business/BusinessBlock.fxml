@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="parentPane" prefHeight="320.0" prefWidth="374.0"
+  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="nl.ica.asd.frontend.gui.evaluate.linear.business.BusinessBlockController">
+  <children>
+    <AnchorPane fx:id="incomingOrdersPane" prefHeight="0.0" prefWidth="103.0"
+      style="-fx-background-color: #FFFFFF;">
+      <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="47.0" stroke="BLACK"
+          strokeType="INSIDE" width="103.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="45.0" layoutY="42.0"
+          stroke="BLACK" strokeType="INSIDE" width="103.0"/>
+        <Label fx:id="incomingOrders" alignment="CENTER" layoutY="39.0"
+          prefWidth="${incomingOrdersPane.width}" text="50" textAlignment="CENTER">
+          <font>
+            <Font size="34.0"/>
+          </font>
+        </Label>
+        <Label alignment="CENTER" layoutY="6.0" prefWidth="${incomingOrdersPane.width}"
+          text="%businessblock.incoming" textAlignment="CENTER" textFill="#3399ff"/>
+        <Label alignment="CENTER" layoutY="23.0" prefWidth="${incomingOrdersPane.width}"
+          text="%businessblock.order" textAlignment="CENTER" textFill="#3399ff"/>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="placedOrdersPane" layoutX="199.0" prefHeight="0.0" prefWidth="103.0"
+      style="-fx-background-color: #FFFFFF;">
+      <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="47.0" stroke="BLACK"
+          strokeType="INSIDE" width="103.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="45.0" layoutY="42.0"
+          stroke="BLACK" strokeType="INSIDE" width="103.0"/>
+        <Label fx:id="placedOrders" alignment="CENTER" layoutY="39.0"
+          prefWidth="${placedOrdersPane.width}" text="50" textAlignment="CENTER">
+          <font>
+            <Font size="34.0"/>
+          </font>
+        </Label>
+        <Label alignment="CENTER" layoutY="6.0" prefWidth="${placedOrdersPane.width}"
+          text="%businessblock.placed" textAlignment="CENTER" textFill="#3399ff"/>
+        <Label alignment="CENTER" layoutY="23.0" prefWidth="${placedOrdersPane.width}"
+          text="%businessblock.order" textAlignment="CENTER" textFill="#3399ff"/>
+        <Line endX="5.0" endY="10.0" layoutX="46.0" layoutY="76.0" startY="20.0"/>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="incomingGoodsPane" layoutX="199.0" layoutY="232.0" prefHeight="0.0"
+      prefWidth="103.0" style="-fx-background-color: #FFFFFF;">
+      <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="47.0" stroke="BLACK"
+          strokeType="INSIDE" width="103.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="45.0" layoutY="42.0"
+          stroke="BLACK" strokeType="INSIDE" width="103.0"/>
+        <Label fx:id="incomingGoods" alignment="CENTER" layoutY="39.0"
+          prefWidth="${incomingGoodsPane.width}" text="50" textAlignment="CENTER">
+          <font>
+            <Font size="34.0"/>
+          </font>
+        </Label>
+        <Label alignment="CENTER" layoutY="6.0" prefWidth="${incomingGoodsPane.width}"
+          text="%businessblock.incoming" textAlignment="CENTER" textFill="#3399ff"/>
+        <Label alignment="CENTER" layoutY="24.0" prefWidth="${incomingGoodsPane.width}"
+          text="%businessblock.goods" textAlignment="CENTER" textFill="#3399ff"/>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="outgoingGoodsPane" layoutY="232.0" prefHeight="45.0" prefWidth="103.0"
+      style="-fx-background-color: #FFFFFF;">
+      <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="47.0" stroke="BLACK"
+          strokeType="INSIDE" width="103.0"/>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="45.0" layoutY="42.0"
+          stroke="BLACK" strokeType="INSIDE" width="103.0"/>
+        <Label fx:id="outgoingGoods" alignment="CENTER" layoutY="39.0"
+          prefWidth="${outgoingGoodsPane.width}" text="50" textAlignment="CENTER">
+          <font>
+            <Font size="34.0"/>
+          </font>
+        </Label>
+        <Label alignment="CENTER" layoutY="6.0" prefWidth="${outgoingGoodsPane.width}"
+          text="%businessblock.outgoing" textAlignment="CENTER" textFill="#3399ff"/>
+        <Label alignment="CENTER" layoutY="23.0" prefWidth="${outgoingGoodsPane.width}"
+          text="%businessblock.goods" textAlignment="CENTER" textFill="#3399ff"/>
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="warehousePane" layoutX="103.0" layoutY="139.0" prefHeight="87.0"
+      prefWidth="96.0">
+      <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="118.0" layoutX="-36.0"
+          layoutY="-31.0" stroke="BLACK" strokeType="INSIDE" width="170.0"/>
+        <Label layoutX="-28.0" layoutY="-26.0" prefHeight="15.0" prefWidth="148.0"
+          text="%businessblock.budget"/>
+        <Label fx:id="budgetValue" layoutX="-28.0" layoutY="-9.0" prefHeight="15.0"
+          prefWidth="148.0" text="Label"/>
+        <Line endX="70.0" layoutX="63.0" layoutY="8.0" startX="-100.0"/>
+        <Line endX="70.0" layoutX="63.0" layoutY="46.0" startX="-100.0"/>
+        <Label fx:id="stockValue" layoutX="-29.0" layoutY="29.0" prefHeight="15.0" prefWidth="148.0"
+          text="Label"/>
+        <Label layoutX="-29.0" layoutY="12.0" prefHeight="15.0" prefWidth="148.0"
+          text="%businessblock.stock"/>
+        <Label fx:id="incordersValue" layoutX="-29.0" layoutY="68.0" prefHeight="15.0"
+          prefWidth="148.0" text="Label"/>
+        <Label layoutX="-29.0" layoutY="51.0" prefHeight="15.0" prefWidth="148.0"
+          text="%businessblock.openorders"/>
+      </children>
+    </AnchorPane>
+    <Line endY="65.0" fill="BLACK" layoutX="50.0" layoutY="87.0"/>
+    <Line endX="63.0" fill="BLACK" layoutX="3.0" layoutY="152.0" startX="47.0"/>
+    <Line endX="65.0" fill="BLACK" layoutX="3.0" layoutY="187.0" startX="47.0"/>
+    <Line endY="44.0" fill="BLACK" layoutX="50.0" layoutY="188.0"/>
+    <Line endY="44.0" fill="BLACK" layoutX="251.0" layoutY="188.0"/>
+    <Line endX="100.0" fill="BLACK" layoutX="151.0" layoutY="187.0" startX="85.0"/>
+    <Line endX="100.0" fill="BLACK" layoutX="151.0" layoutY="152.0" startX="85.0"/>
+    <Line endY="65.0" fill="BLACK" layoutX="251.0" layoutY="87.0"/>
+    <AnchorPane fx:id="outgoingArrowsPane" layoutX="301.0" prefHeight="320.0" prefWidth="76.0">
+      <children>
+        <AnchorPane layoutY="29.0" prefHeight="1.0" prefWidth="77.0">
+          <children>
+            <Line endX="10.0" endY="5.0" layoutX="66.0" layoutY="9.0"/>
+            <Line endX="10.0" endY="5.0" layoutX="66.0" layoutY="9.0" startY="10.0"/>
+            <Line endX="-25.0" layoutX="101.0" layoutY="14.0" startX="-100.0"/>
+          </children>
+        </AnchorPane>
+        <AnchorPane layoutY="261.0" prefHeight="1.0" prefWidth="77.0">
+          <children>
+            <Line endY="5.0" layoutX="2.0" layoutY="8.0" rotate="180.0" startX="10.0"/>
+            <Line endY="5.0" layoutX="2.0" layoutY="10.0" rotate="180.0" startX="10.0"
+              startY="10.0"/>
+            <Line endX="-25.0" layoutX="101.0" layoutY="14.0" startX="-100.0"/>
+          </children>
+        </AnchorPane>
+      </children>
+    </AnchorPane>
+    <Line endX="10.0" endY="5.0" layoutX="58.0" layoutY="147.0" startY="10.0"/>
+    <Line endX="10.0" endY="5.0" layoutX="58.0" layoutY="147.0"/>
+    <Line endY="5.0" layoutX="236.0" layoutY="182.0" startX="10.0"/>
+    <Line endY="5.0" layoutX="236.0" layoutY="182.0" startX="10.0" startY="10.0"/>
+    <Line endX="5.0" endY="10.0" layoutX="44.0" layoutY="221.0"/>
+    <Line endX="5.0" endY="10.0" layoutX="51.0" layoutY="211.0" startY="20.0"/>
+    <Line endX="5.0" endY="10.0" layoutX="252.0" layoutY="86.0"/>
+    <Label fx:id="level" alignment="CENTER" contentDisplay="CENTER" layoutY="90.0"
+      minWidth="-Infinity" prefHeight="17.0" prefWidth="${parentPane.width - 77}"
+      text="Regional warehouse" textAlignment="CENTER"/>
+  </children>
+</AnchorPane>
